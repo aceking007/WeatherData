@@ -55,6 +55,6 @@ function parseData(data){
 
 function getWeatherData(){
   var script = document.createElement('script');
-  script.src = `https://api.darksky.net/forecast/${apiKey}/${latitude},${longitude},${result.innerHTML}?callback=parseData`
+  script.src = `https://api.darksky.net/forecast/4ed34be1336b2c31eccb2af08d855bf8/${latitude},${longitude},${result.innerHTML}?callback=parseData`
   document.getElementsByTagName('head')[0].appendChild(script);
 };
