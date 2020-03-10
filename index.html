@@ -1,0 +1,27 @@
+<html>
+<head>
+  <title>Weather data for Tal Chhapar</title>
+  <link rel='stylesheet' href='style.css'>
+  <script src='./config.js'></script>
+</head>
+<body>
+  <div class='container'>
+    <div style='float:left'>
+      Weather Data for Tal Chhapar<br>
+      Latitude: <div id='lat' style='float:right'></div><br>
+      longitude: <div id='lon' style='float:right'></div><br>
+      <label for="date">Date: </label>
+      <input type="date" name="date" id="date" onchange='unixDate(event);' /><br>
+      <label for="unix-date">UNIX date:</label>
+      <div id="unix-date" style='float:right'></div><br>
+      <div id='demo'></div><br>
+    </div>
+    <div id='getDataDiv'>
+      <button onclick="getWeatherData()">Get Data!</button>
+    </div>
+    <div id='weatherData'>
+    </div>
+  </div>
+</body>
+<script type='text/javascript' src='unixdate.js'></script>
+</html>
