@@ -47,6 +47,7 @@ function showData(wData){
 // Weather data and its analysis via JSONP
 function parseData(data){
   // console.log(data.hourly.data);
+  document.getElementById('weatherData').innerHTML = "";
   for (var i=0; i<data.hourly.data.length; i++){
     console.log(data.hourly.data[i]);
     showData(data.hourly.data[i]);
