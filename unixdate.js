@@ -20,7 +20,9 @@ function normalDate(uDate){
   return time
 };
 
+// displays the weather data by the hour
 function showData(wData){
+  // console.log(wData)
   var newDiv = document.createElement("div");
   var nDate = normalDate(wData.time).slice(0,-3);
   var tC = (wData.temperature - 32) * (5/9)
@@ -44,14 +46,22 @@ function showData(wData){
   document.getElementById('weatherData').appendChild(newDiv);
 };
 
+// displays the moon phase data
+function printMoonPhase(moonPhase){
+  document.getElementById('moonDataInner').innerHTML = moonPhase
+}
+
 // Weather data and its analysis via JSONP
 function parseData(data){
   // console.log(data.hourly.data);
   document.getElementById('weatherData').innerHTML = "";
   for (var i=0; i<data.hourly.data.length; i++){
-    console.log(data.hourly.data[i]);
+    // console.log(data.hourly.data[i]);
+    // console.log(data)
+    // console.log(data.daily.data[0].moonPhase)
     showData(data.hourly.data[i]);
   };
+  printMoonPhase(data.daily.data[0].moonPhase)
 };
 
 function getWeatherData(){
