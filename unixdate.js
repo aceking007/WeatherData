@@ -48,7 +48,7 @@ function showData(wData){
 
 // displays the moon phase data
 function printMoonPhase(moonPhase){
-  document.getElementById('moonDataInner').innerHTML = moonPhase
+  document.getElementById('moonDataInner').innerHTML = moonPhase;
 }
 
 // Weather data and its analysis via JSONP
